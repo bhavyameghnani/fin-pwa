@@ -1,7 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import AnalogClock from "analog-clock-react";
 import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
@@ -33,9 +32,7 @@ export default function Contact() {
         <Grid align="center" item xs={12}>
           <h1>FinAyna - Smart Mirror</h1>
         </Grid>
-        <Grid align="left" item xs={6}>
-          <AnalogClock {...options} />
-        </Grid>
+        <Grid align="left" item xs={6}></Grid>
         <Grid align="center" item xs={6}>
           <Typography variant="h3">
             Your portfolio has gone up today by 5%

@@ -1,16 +1,18 @@
 import React, { useState } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import { recognition } from "./API/voicerecognition";
-import Welcome from "./components/Home";
 import "./App.css";
 import Contact from "./components/Navbar";
+import QuickStart from "./components/QuickStart";
 
 const App = () => {
   const history = useNavigate();
   const [stopReco, setStopReco] = useState(false);
 
   recognition.onresult = (event) => {
+    console.log(event)
     const command = event.results[0][0].transcript;
+    console.log(command)
 
     if (command.includes("go to") || command.includes("navigate to")) {
       if (command.includes("home") || command.includes("index")) {
@@ -49,7 +51,7 @@ const App = () => {
   return (
     <div className="App-header" >
       <Routes>
-        <Route path="/" element={<Welcome />} />
+        <Route path="/" element={<QuickStart />} />
         <Route path="/contact" element={<Contact />}></Route>
       </Routes>
     </div>

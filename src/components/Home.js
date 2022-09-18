@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import AnalogClock from "analog-clock-react";
-import Blink from "react-blink-text";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -33,6 +31,7 @@ export default function Welcome() {
   return (
     <div className={classes.root}>
       <Grid container spacing={3}>
+        {" "}
         <Grid align="center" item xs={12}>
           <h1>FinAyna - Smart Mirror</h1>
         </Grid>
@@ -46,7 +45,6 @@ export default function Welcome() {
         <Grid align="center" item xs={12}>
           <h1>Home Page</h1>
         </Grid>
-
         <Grid align="center" item xs={12}>
           <h3>Finayna - Smart Mirror Home</h3>
         </Grid>
