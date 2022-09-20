@@ -4,7 +4,8 @@ import Grid from "@material-ui/core/Grid";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import Container from "@material-ui/core/Container";
-import wave from '../Resources/wave.gif'
+import wave from '../Resources/wave.gif';
+import bond from '../Resources/bond.png'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -19,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
   
 }));
 
-export default function QuickStart() {
+export default function Bonds() {
   const classes = useStyles();
 
   // eslint-disable-next-line
@@ -46,8 +47,12 @@ export default function QuickStart() {
           </Grid>
 
           <Grid container spacing={4}>
+          <Grid align="center" item xs={12}>
+          <br/> <br/> <br/> <br/> <br/>
+              <h3>UK Green Bonds Boost Sustainability Toolkit</h3>
+            </Grid>
             <Grid align="center" item xs={12}>
-              <br/> <br/> <br/> <br/> <br/>
+              
              
               <Carousel
                 autoPlay={true}
@@ -60,9 +65,10 @@ export default function QuickStart() {
                 swipeable={false}
                 
               >
-                <h2>Good Morning, Your portfolio has gone up today by 5%</h2>
-                <h2>Today is your day, Enjoy your day!</h2>
-                <h2> Wealth is the ability to fully experience life</h2>
+                
+                <h4>The UK sold green retail bonds, offering a three-year maturity, fixed rate of return and a 100% capital guarantee</h4>
+                <h4>Proceeds will be used for projects including wind farms and accelerating the transition to electric vehicles</h4>
+                <h4>Governments need to highlight climate risk mitigation measures if green retail bonds are to gain momentum</h4>
               </Carousel>
 
              
@@ -70,33 +76,17 @@ export default function QuickStart() {
               <img src={wave} alt="wave" />
             </Grid>
             <Grid align="center" item xs={12}>
-            <br/> <br/> <br/> <br/> <br/>
-              Trending Research
+             <br/> <br/>
+              Summary
             </Grid>
           </Grid>
-          <Grid align="left" item xs={12}>
-          UK Green Bonds Boost Sustainability Toolkit
-          EV Adoption to Grow Exponentially Through 2035, Says Tu Le
-            ESG360 - Green Energy Stocks and Navigating Social Data
-          </Grid>
-
-          <Grid container spacing={4}>
-            <Grid align="center" item xs={12}>
-            <br/> <br/> <br/> 
-              Latest News Articles
-            </Grid>
-          </Grid>
-          <Grid align="left" item xs={12}>
-          Renewed buzz over India entry in JPMorgan EM bond index. 
-Goldman Cuts US Growth Forecast for 2023 After Rate Path Change
-ECB Taps Amazon, Four Others to Pitch Digital Euro Prototype
-           
-           
-          </Grid>
-
           <Grid align="center" item xs={12}>
+          The Green Savings Bonds – like the UK’s green bonds targeting institutional investors – were issued under the Green Finance Framework, published in June 2021. 
+          </Grid>
+          <Grid align="center" item xs={12}>
+          <img src={bond} alt="esg" width="500px"/>
           <br/> <br/> <br/> 
-            <i>Quick Start</i>
+            <i>Research Reports</i>
           </Grid>
         </Grid>
       </Container>

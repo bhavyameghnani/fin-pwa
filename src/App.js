@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import { recognition } from "./API/voicerecognition";
 import "./App.css";
-import Contact from "./components/Navbar";
+import Podcast from "./components/Podcast";
+import Bonds from "./components/Bond";
 import QuickStart from "./components/QuickStart";
 
 const App = () => {
@@ -18,15 +19,16 @@ const App = () => {
       if (command.includes("home") || command.includes("index")) {
         history("/");
       } else if (
-        command.includes("contact") ||
-        command.includes("contact us")
+        command.includes("podcast") ||
+        command.includes("podcasts")
+     
       ) {
-        history("/contact");
+        history("/podcast");
       } else if (
-        command.includes("tutorials") ||
-        command.includes("tutorial")
+        command.includes("report") ||
+        command.includes("reports")
       ) {
-        history("/tutorials");
+        history("/bonds");
       } else if (command.includes("about") || command.includes("about us")) {
         history("/about");
       }
@@ -52,7 +54,8 @@ const App = () => {
     <div className="App-header" >
       <Routes>
         <Route path="/" element={<QuickStart />} />
-        <Route path="/contact" element={<Contact />}></Route>
+        <Route path="/podcast" element={<Podcast />}></Route>
+        <Route path="/bonds" element={<Bonds />}></Route>
       </Routes>
     </div>
   );
