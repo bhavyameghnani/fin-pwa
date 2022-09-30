@@ -5,7 +5,9 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from "react-responsive-carousel";
 import Container from "@material-ui/core/Container";
 import wave from '../Resources/wave.gif';
-import bond from '../Resources/bond.png'
+import bond from '../Resources/bond.png';
+import useSound from 'use-sound';
+import mySound from '../Resources/hear_report.mp3' // Your sound file path here
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -22,10 +24,12 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Bonds() {
   const classes = useStyles();
+  const [playSound] = useSound(mySound)
 
   // eslint-disable-next-line
   const [dateTime, setDateTime] = useState(new Date().toLocaleString());
-
+  var today = new Date();
+  var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
   return (
     <div className={classes.root}>
       <Container maxWidth="lg" style={{ backgroundColor: "black" }}>
@@ -33,11 +37,11 @@ export default function Bonds() {
           <Grid align="center" item xs={12}></Grid>
           <Grid container spacing={1}>
             <Grid align="left" item xs={6}>
-              Monday, September 19, 2022
+            Wednesday, September 21, 2022
             </Grid>
             <Grid item xs={6}></Grid>
             <Grid align="left" item xs={6}>
-              15:30
+              {time}
             </Grid>
             <Grid item xs={6}></Grid>
             <Grid align="left" item xs={6}>
@@ -53,7 +57,7 @@ export default function Bonds() {
             </Grid>
             <Grid align="center" item xs={12}>
               
-             
+            <h3 onClick={playSound()}></h3>
               <Carousel
                 autoPlay={true}
                 autoFocus={true}

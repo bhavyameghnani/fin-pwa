@@ -4,7 +4,7 @@ import Grid from "@material-ui/core/Grid";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import Container from "@material-ui/core/Container";
-import wave from '../Resources/wave.gif'
+import wave from '../Resources/wave.jpg'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,6 +25,9 @@ export default function QuickStart() {
   // eslint-disable-next-line
   const [dateTime, setDateTime] = useState(new Date().toLocaleString());
 
+  var today = new Date();
+  var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+
   return (
     <div className={classes.root}>
       <Container maxWidth="lg" style={{ backgroundColor: "black" }}>
@@ -32,11 +35,11 @@ export default function QuickStart() {
           <Grid align="center" item xs={12}></Grid>
           <Grid container spacing={1}>
             <Grid align="left" item xs={6}>
-              Monday, September 19, 2022
+              Wednesday, September 21, 2022
             </Grid>
             <Grid item xs={6}></Grid>
             <Grid align="left" item xs={6}>
-              15:30
+              {time}
             </Grid>
             <Grid item xs={6}></Grid>
             <Grid align="left" item xs={6}>
@@ -60,44 +63,45 @@ export default function QuickStart() {
                 swipeable={false}
                 
               >
-                <h2>Good Morning, Your portfolio has gone up today by 5%</h2>
+                {/* <h2>Good Morning, Your portfolio has gone up today by 5%</h2>
                 <h2>Today is your day, Enjoy your day!</h2>
-                <h2> Wealth is the ability to fully experience life</h2>
+                <h2> Wealth is the ability to fully experience life</h2> */}
+                <h2> Welcome to Finayna World </h2>
               </Carousel>
 
              
 
               <img src={wave} alt="wave" />
             </Grid>
-            <Grid align="center" item xs={12}>
+            {/* <Grid align="center" item xs={12}>
             <br/> <br/> <br/> <br/> <br/>
               Trending Research
-            </Grid>
-          </Grid>
-          <Grid align="left" item xs={12}>
+            </Grid>*/}
+          </Grid> 
+          {/* <Grid align="left" item xs={12}>
           UK Green Bonds Boost Sustainability Toolkit
           EV Adoption to Grow Exponentially Through 2035, Says Tu Le
             ESG360 - Green Energy Stocks and Navigating Social Data
-          </Grid>
+          </Grid> */}
 
-          <Grid container spacing={4}>
+          {/* <Grid container spacing={4}>
             <Grid align="center" item xs={12}>
             <br/> <br/> <br/> 
               Latest News Articles
             </Grid>
-          </Grid>
-          <Grid align="left" item xs={12}>
+          </Grid> */}
+          {/* <Grid align="left" item xs={12}>
           Renewed buzz over India entry in JPMorgan EM bond index. 
 Goldman Cuts US Growth Forecast for 2023 After Rate Path Change
 ECB Taps Amazon, Four Others to Pitch Digital Euro Prototype
            
            
-          </Grid>
+          </Grid> */}
 
-          <Grid align="center" item xs={12}>
+          {/* <Grid align="center" item xs={12}>
           <br/> <br/> <br/> 
             <i>Quick Start</i>
-          </Grid>
+          </Grid> */}
         </Grid>
       </Container>
     </div>
