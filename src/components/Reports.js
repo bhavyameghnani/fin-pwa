@@ -5,9 +5,9 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from "react-responsive-carousel";
 import Container from "@material-ui/core/Container";
 import wave from '../Resources/wave.gif';
-import esg from '../Resources/esg.jpg'
-import useSound from 'use-sound'
-import mySound from '../Resources/wow_who_did_the_magic.mp3' // Your sound file path here
+import bond from '../Resources/bond.png';
+import useSound from 'use-sound';
+import mySound from '../Resources/hear_report.mp3' // Your sound file path here
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   
 }));
 
-export default function Magic() {
+export default function Reports() {
   const classes = useStyles();
   const [playSound] = useSound(mySound)
 
@@ -30,7 +30,6 @@ export default function Magic() {
   const [dateTime, setDateTime] = useState(new Date().toLocaleString());
   var today = new Date();
   var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-
   return (
     <div className={classes.root}>
       <Container maxWidth="lg" style={{ backgroundColor: "black" }}>
@@ -42,7 +41,7 @@ export default function Magic() {
             </Grid>
             <Grid item xs={6}></Grid>
             <Grid align="left" item xs={6}>
-            {time}
+              {time}
             </Grid>
             <Grid item xs={6}></Grid>
             <Grid align="left" item xs={6}>
@@ -54,9 +53,12 @@ export default function Magic() {
           <Grid container spacing={4}>
           <Grid align="center" item xs={12}>
           <br/> <br/> <br/> <br/> <br/>
-              <h3 onClick={playSound()}></h3>
+              <h3>UK Green Bonds Boost Sustainability Toolkit</h3>
             </Grid>
-            <Carousel
+            <Grid align="center" item xs={12}>
+              
+            <h3 onClick={playSound()}></h3>
+              <Carousel
                 autoPlay={true}
                 autoFocus={true}
                 infiniteLoop={true}
@@ -67,44 +69,29 @@ export default function Magic() {
                 swipeable={false}
                 
               >
-                <h2>Good Morning, Your portfolio has gone up today by 6%</h2>
-                <h2>Today is your day, Enjoy your day!</h2>
-                <h2> Wealth is the ability to fully experience life</h2>
+                
+                <h4>The UK sold green retail bonds, offering a three-year maturity, fixed rate of return and a 100% capital guarantee</h4>
+                <h4>Proceeds will be used for projects including wind farms and accelerating the transition to electric vehicles</h4>
+                <h4>Governments need to highlight climate risk mitigation measures if green retail bonds are to gain momentum</h4>
               </Carousel>
-          
-              <Grid align="center" item xs={12}>
+
+             
+
               <img src={wave} alt="wave" />
-            <br/> <br/> <br/> <br/> <br/>
-              Trending Research
             </Grid>
-          </Grid>
-          <Grid align="left" item xs={12}>
-          <marquee scrollamount="15" width="100%" direction="left" >
-          UK Green Bonds Boost Sustainability Toolkit.       EV Adoption to Grow Exponentially Through 2035, Says Tu Le ESG360 - Green Energy Stocks and Navigating Social Data
-            </marquee>
-        
-            
-          </Grid>
-
-          <Grid container spacing={4}>
             <Grid align="center" item xs={12}>
-            <br/> <br/> <br/> 
-              Latest News Articles
+             <br/> <br/>
+              Summary
             </Grid>
           </Grid>
-          <Grid align="left" item xs={12}>
-          <marquee scrollamount="15" width="100%" direction="left" >
-          Renewed buzz over India entry in JPMorgan EM bond index. 
-Goldman Cuts US Growth Forecast for 2023 After Rate Path Change
-ECB Taps Amazon, Four Others to Pitch Digital Euro Prototype
-</marquee>
-           
+          <Grid align="center" item xs={12}>
+          The Green Savings Bonds – like the UK’s green bonds targeting institutional investors – were issued under the Green Finance Framework, published in June 2021. 
           </Grid>
-
-          {/* <Grid align="center" item xs={12}>
+          <Grid align="center" item xs={12}>
+          <img src={bond} alt="esg" width="500px"/>
           <br/> <br/> <br/> 
-            <i>Quick Start</i>
-          </Grid> */}
+            <i>Research Reports</i>
+          </Grid>
         </Grid>
       </Container>
     </div>
